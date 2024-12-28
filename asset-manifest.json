@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/drt-website/static/css/main.d46417a4.css",
-    "main.js": "/drt-website/static/js/main.f68ddcdb.js",
-    "static/js/488.c3afff20.chunk.js": "/drt-website/static/js/488.c3afff20.chunk.js",
-    "index.html": "/drt-website/index.html",
-    "main.d46417a4.css.map": "/drt-website/static/css/main.d46417a4.css.map",
-    "main.f68ddcdb.js.map": "/drt-website/static/js/main.f68ddcdb.js.map",
-    "488.c3afff20.chunk.js.map": "/drt-website/static/js/488.c3afff20.chunk.js.map"
+    "main.css": "/drt-website/static/css/main.acb677a6.css",
+    "main.js": "/drt-website/static/js/main.56f1d34a.js",
+    "static/js/685.fa3ffce8.chunk.js": "/drt-website/static/js/685.fa3ffce8.chunk.js",
+    "static/media/drt-logo.png": "/drt-website/static/media/drt-logo.ad1457165ca6eab89253.png",
+    "index.html": "/drt-website/index.html"
   },
   "entrypoints": [
-    "static/css/main.d46417a4.css",
-    "static/js/main.f68ddcdb.js"
+    "static/css/main.acb677a6.css",
+    "static/js/main.56f1d34a.js"
   ]
 }
