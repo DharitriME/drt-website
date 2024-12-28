@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/drt-website/static/css/main.acb677a6.css",
-    "main.js": "/drt-website/static/js/main.56f1d34a.js",
+    "main.css": "/drt-website/static/css/main.199b16af.css",
+    "main.js": "/drt-website/static/js/main.2e119c6c.js",
     "static/js/685.fa3ffce8.chunk.js": "/drt-website/static/js/685.fa3ffce8.chunk.js",
     "static/media/drt-logo.png": "/drt-website/static/media/drt-logo.ad1457165ca6eab89253.png",
     "index.html": "/drt-website/index.html"
   },
   "entrypoints": [
-    "static/css/main.acb677a6.css",
-    "static/js/main.56f1d34a.js"
+    "static/css/main.199b16af.css",
+    "static/js/main.2e119c6c.js"
   ]
 }
