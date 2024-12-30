@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/layout/Navbar';
 import HeroSection from './components/Home/Hero';
 import ProductsSection from './components/sections/ProductsSection';
@@ -7,14 +7,19 @@ import EcosystemSection from './components/sections/EcosystemSection';
 import CommunitySection from './components/sections/CommunitySection';
 import AboutSection from './components/sections/AboutSection';
 
+
 const App = () => {
+  const [isNavVisible, setIsNavVisible] = useState(true);
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <Navbar />
+      
+      {/* Pass isNavVisible state and setter to Navbar */}
+      <Navbar isNavVisible={isNavVisible} setIsNavVisible={setIsNavVisible} />
 
-      {/* Hero Section */}
-      <HeroSection />
+      {/* Main Content with dynamic padding-top */}
+      <main className={`transition-all duration-500 ${isNavVisible ? 'pt-24' : 'pt-0'}`}>
+
+      <HeroSection/>
 
       {/* Main Content */}
       <main>
@@ -42,6 +47,7 @@ const App = () => {
         <section id="about">
           <AboutSection />
         </section>
+      </main>
       </main>
 
       {/* Footer */}
