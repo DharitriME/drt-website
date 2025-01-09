@@ -204,16 +204,8 @@
 // export default Navbar;
 
 import React, { useState, useEffect } from "react";
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Sun,
-  Moon,
-  ArrowRight,
-  Sparkles,
-} from "lucide-react";
-import logo from "./drt-logo.png";
+import { Menu, X, ChevronDown, Sun, Moon, ArrowRight } from "lucide-react";
+import logo from "../../logo.svg";
 
 const Navbar = ({ isNavVisible, setIsNavVisible }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -540,12 +532,12 @@ const Navbar = ({ isNavVisible, setIsNavVisible }) => {
                     src={logo}
                     alt="Dharitri Logo"
                     className={`transition-all duration-300 ${
-                      isScrolled ? "h-8" : "h-10"
+                      isScrolled ? "h-11" : "h-12"
                     }`}
                   />
                   <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
                 </div>
-                <div className="relative">
+                {/* <div className="relative">
                   <span
                     className={`font-bold text-transparent bg-clip-text bg-gradient-to-r 
                 from-indigo-600 via-purple-600 to-pink-600
@@ -554,7 +546,7 @@ const Navbar = ({ isNavVisible, setIsNavVisible }) => {
                     DHARITRI
                   </span>
                   <Sparkles className="absolute -right-6 -top-2 w-4 h-4 text-yellow-400 animate-pulse" />
-                </div>
+                </div> */}
               </div>
 
               {/* Desktop Navigation */}
