@@ -3,15 +3,19 @@ name: Deploy React App
 on:
   push:
     branches:
-      - main  # or your default branch name
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+      with:
+        persist-credentials: false
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
@@ -21,17 +25,15 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build the app
-      run: npm run build
-
     - name: Configure Git
       run: |
-        git config --global user.name "GitHub Actions Bot"
-        git config --global user.email "github-actions@github.com"
-        git remote set-url origin https://${GITHUB_ACTOR}:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
     - name: Deploy to GitHub Pages
-      run: |
-        npm run deploy
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Use a personal access token with organization access
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: |
+        git remote set-url origin https://${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        npm run deploy
