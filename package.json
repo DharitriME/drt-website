@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build --repo https://$GH_TOKEN@github.com/TerraDharitri/drt-website.git"
+    "deploy": "GH_TOKEN=$GH_TOKEN gh-pages -d build -r https://github.com/TerraDharitri/drt-website.git"
   },
   "eslintConfig": {
     "extends": [
