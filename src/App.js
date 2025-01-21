@@ -1,53 +1,54 @@
-import React, { useState } from 'react';
-import Navbar from './components/layout/Navbar';
-import HeroSection from './components/Home/Hero';
-import ProductsSection from './components/sections/ProductsSection';
-import DevelopersSection from './components/sections/DevelopersSection';
-import EcosystemSection from './components/sections/EcosystemSection';
-import CommunitySection from './components/sections/CommunitySection';
-import AboutSection from './components/sections/AboutSection';
-
+import React, { useState } from "react";
+import Navbar from "./components/layout/Navbar";
+import HeroSection from "./components/Home/Hero";
+import ProductsSection from "./components/sections/ProductsSection";
+import DevelopersSection from "./components/sections/DevelopersSection";
+import EcosystemSection from "./components/sections/EcosystemSection";
+import CommunitySection from "./components/sections/CommunitySection";
+import AboutSection from "./components/sections/AboutSection";
 
 const App = () => {
   const [isNavVisible, setIsNavVisible] = useState(true);
   return (
     <div className="min-h-screen bg-gray-50">
-      
       {/* Pass isNavVisible state and setter to Navbar */}
       <Navbar isNavVisible={isNavVisible} setIsNavVisible={setIsNavVisible} />
 
       {/* Main Content with dynamic padding-top */}
-      <main className={`transition-all duration-500 ${isNavVisible ? 'pt-24' : 'pt-0'}`}>
+      <main
+        className={`transition-all duration-500 ${
+          isNavVisible ? "pt-24" : "pt-0"
+        }`}
+      >
+        <HeroSection />
 
-      <HeroSection/>
+        {/* Main Content */}
+        <main>
+          {/* Products Section */}
+          <section id="products">
+            <ProductsSection />
+          </section>
 
-      {/* Main Content */}
-      <main>
-        {/* Products Section */}
-        <section id="products">
-          <ProductsSection />
-        </section>
+          {/* Developers Section */}
+          <section id="developers">
+            <DevelopersSection />
+          </section>
 
-        {/* Developers Section */}
-        <section id="developers">
-          <DevelopersSection />
-        </section>
+          {/* Ecosystem Section */}
+          <section id="ecosystem">
+            <EcosystemSection />
+          </section>
 
-        {/* Ecosystem Section */}
-        <section id="ecosystem">
-          <EcosystemSection />
-        </section>
+          {/* Community Section */}
+          <section id="community">
+            <CommunitySection />
+          </section>
 
-        {/* Community Section */}
-        <section id="community">
-          <CommunitySection />
-        </section>
-
-        {/* About Section */}
-        <section id="about">
-          <AboutSection />
-        </section>
-      </main>
+          {/* About Section */}
+          <section id="about">
+            <AboutSection />
+          </section>
+        </main>
       </main>
 
       {/* Footer */}
@@ -66,10 +67,38 @@ const App = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><a href="#products" className="text-gray-400 hover:text-white">Products</a></li>
-                <li><a href="#developers" className="text-gray-400 hover:text-white">Developers</a></li>
-                <li><a href="#ecosystem" className="text-gray-400 hover:text-white">Ecosystem</a></li>
-                <li><a href="#community" className="text-gray-400 hover:text-white">Community</a></li>
+                <li>
+                  <a
+                    href="#products"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Products
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#developers"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Developers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#ecosystem"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Ecosystem
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#community"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Community
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -77,10 +106,38 @@ const App = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
-                <li><a href="/dharitriChanges" className="text-gray-400 hover:text-white">Documentation</a></li>
-                <li><a href="/dharitriChanges" className="text-gray-400 hover:text-white">GitHub</a></li>
-                <li><a href="/dharitriChanges" className="text-gray-400 hover:text-white">Whitepaper</a></li>
-                <li><a href="/dharitriChanges" className="text-gray-400 hover:text-white">Blog</a></li>
+                <li>
+                  <a
+                    href="/dharitriChanges"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Documentation
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/dharitriChanges"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/dharitriChanges"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Whitepaper
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/dharitriChanges"
+                    className="text-gray-400 hover:text-white"
+                  >
+                    Blog
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -96,7 +153,9 @@ const App = () => {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Your Brand. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} Your Brand. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>

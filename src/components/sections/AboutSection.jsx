@@ -1,5 +1,5 @@
-import React from 'react';
-import { Server, Zap, Lock, Users, CheckCircle } from 'lucide-react';
+import React from "react";
+import { Server, Zap, Lock, Users, CheckCircle } from "lucide-react";
 
 const TechnologyCard = ({ title, description, icon: Icon }) => {
   return (
@@ -30,7 +30,7 @@ const TeamMemberCard = ({ name, role, image }) => {
 };
 
 const RoadmapItem = ({ quarter, year, title, status, description }) => {
-  const isCompleted = status === 'completed';
+  const isCompleted = status === "completed";
   return (
     <div className="flex items-start space-x-4">
       <div className="flex-shrink-0 w-24 text-sm font-medium text-gray-500">
@@ -38,7 +38,11 @@ const RoadmapItem = ({ quarter, year, title, status, description }) => {
       </div>
       <div className="flex-grow">
         <div className="flex items-center space-x-2">
-          <CheckCircle className={`w-5 h-5 ${isCompleted ? 'text-green-500' : 'text-gray-300'}`} />
+          <CheckCircle
+            className={`w-5 h-5 ${
+              isCompleted ? "text-green-500" : "text-gray-300"
+            }`}
+          />
           <h4 className="text-lg font-medium text-gray-900">{title}</h4>
         </div>
         <p className="mt-1 text-gray-600">{description}</p>
@@ -50,72 +54,77 @@ const RoadmapItem = ({ quarter, year, title, status, description }) => {
 const AboutSection = () => {
   const technologies = [
     {
-      title: 'High Performance',
-      description: 'Advanced blockchain architecture delivering superior throughput and scalability.',
-      icon: Zap
+      title: "High Performance",
+      description:
+        "Advanced blockchain architecture delivering superior throughput and scalability.",
+      icon: Zap,
     },
     {
-      title: 'Security',
-      description: 'Industry-leading security measures protecting network and assets.',
-      icon: Lock
+      title: "Security",
+      description:
+        "Industry-leading security measures protecting network and assets.",
+      icon: Lock,
     },
     {
-      title: 'Scalability',
-      description: 'Innovative sharding solution for unlimited horizontal scaling.',
-      icon: Server
+      title: "Scalability",
+      description:
+        "Innovative sharding solution for unlimited horizontal scaling.",
+      icon: Server,
     },
     {
-      title: 'Governance',
-      description: 'Decentralized governance enabling community-driven decision making.',
-      icon: Users
-    }
+      title: "Governance",
+      description:
+        "Decentralized governance enabling community-driven decision making.",
+      icon: Users,
+    },
   ];
 
   const teamMembers = [
     {
-      name: 'Alex Thompson',
-      role: 'Chief Executive Officer',
-      image: null
+      name: "Alex Thompson",
+      role: "Chief Executive Officer",
+      image: null,
     },
     {
-      name: 'Sarah Chen',
-      role: 'Chief Technology Officer',
-      image: null
+      name: "Sarah Chen",
+      role: "Chief Technology Officer",
+      image: null,
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'Head of Research',
-      image: null
+      name: "Michael Rodriguez",
+      role: "Head of Research",
+      image: null,
     },
     {
-      name: 'Emma Wilson',
-      role: 'Head of Ecosystem',
-      image: null
-    }
+      name: "Emma Wilson",
+      role: "Head of Ecosystem",
+      image: null,
+    },
   ];
 
   const roadmapItems = [
     {
-      quarter: 'Q2',
-      year: '2024',
-      title: 'Protocol Upgrade',
-      status: 'completed',
-      description: 'Major protocol upgrade implementing advanced sharding capabilities.'
+      quarter: "Q2",
+      year: "2024",
+      title: "Protocol Upgrade",
+      status: "completed",
+      description:
+        "Major protocol upgrade implementing advanced sharding capabilities.",
     },
     {
-      quarter: 'Q3',
-      year: '2024',
-      title: 'DeFi Framework',
-      status: 'in-progress',
-      description: 'Launch of comprehensive DeFi development framework.'
+      quarter: "Q3",
+      year: "2024",
+      title: "DeFi Framework",
+      status: "in-progress",
+      description: "Launch of comprehensive DeFi development framework.",
     },
     {
-      quarter: 'Q4',
-      year: '2024',
-      title: 'Cross-chain Bridge',
-      status: 'planned',
-      description: 'Implementation of secure cross-chain bridge protocol.'
-    }
+      quarter: "Q4",
+      year: "2024",
+      title: "Cross-chain Bridge",
+      status: "planned",
+      description: "Implementation of secure cross-chain bridge protocol.",
+    },
   ];
 
   return (
@@ -127,14 +136,17 @@ const AboutSection = () => {
             Building the Future of Blockchain
           </h2>
           <p className="max-w-3xl mx-auto text-xl text-gray-500">
-            Our mission is to create a more accessible, efficient, and interconnected blockchain ecosystem
-            that empowers developers and users worldwide.
+            Our mission is to create a more accessible, efficient, and
+            interconnected blockchain ecosystem that empowers developers and
+            users worldwide.
           </p>
         </div>
 
         {/* Technology Section */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">Our Technology</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-8">
+            Our Technology
+          </h3>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {technologies.map((tech, index) => (
               <TechnologyCard key={index} {...tech} />
@@ -144,7 +156,9 @@ const AboutSection = () => {
 
         {/* Team Section */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">Leadership Team</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-8">
+            Leadership Team
+          </h3>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {teamMembers.map((member, index) => (
               <TeamMemberCard key={index} {...member} />
@@ -165,10 +179,12 @@ const AboutSection = () => {
         {/* Contact Section */}
         <div className="mt-16 bg-indigo-700 rounded-lg shadow-xl p-8 text-white">
           <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4">Get in Touch</h3>
+            <h3 className="text-2xl font-bold mb-4">
+              Join the Dharitri Movement
+            </h3>
             <p className="text-indigo-100 mb-6">
-              Have questions or want to learn more about our blockchain platform?
-              Our team is here to help.
+              Be part of a sustainable ecosystem. Connect, engage, and grow with
+              us.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <button className="px-6 py-3 bg-white text-indigo-700 rounded-md font-medium hover:bg-indigo-50 transition-colors">

@@ -1,9 +1,12 @@
-import React from 'react';
-import { MessageCircle, Calendar, Award, Twitter, Globe } from 'lucide-react';
+import React from "react";
+import { MessageCircle, Calendar, Award, Twitter, Globe } from "lucide-react";
 
 const SocialCard = ({ platform, username, followers, icon: Icon }) => {
   return (
-    <a href="/dharitriChanges" className="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6">
+    <a
+      href="/dharitriChanges"
+      className="block bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6"
+    >
       <div className="flex items-center">
         <Icon className="w-6 h-6 text-indigo-600" />
         <div className="ml-4">
@@ -40,24 +43,41 @@ const EventCard = ({ title, date, location, description }) => {
 
 const CommunitySection = () => {
   const socialPlatforms = [
-    { platform: 'Twitter', username: '@YourChain', followers: '150K', icon: Twitter },
-    { platform: 'Discord', username: 'YourChain Community', followers: '75K', icon: MessageCircle },
-    { platform: 'Telegram', username: 'YourChain Official', followers: '50K', icon: Globe }
+    {
+      platform: "Twitter",
+      username: "@YourChain",
+      followers: "150K",
+      icon: Twitter,
+    },
+    {
+      platform: "Discord",
+      username: "YourChain Community",
+      followers: "75K",
+      icon: MessageCircle,
+    },
+    {
+      platform: "Telegram",
+      username: "YourChain Official",
+      followers: "50K",
+      icon: Globe,
+    },
   ];
 
   const upcomingEvents = [
     {
-      title: 'Global Blockchain Summit',
-      date: 'June 15-16, 2024',
-      location: 'Virtual Event',
-      description: 'Join us for two days of insights, networking, and blockchain innovation discussions.'
+      title: "Global Blockchain Summit",
+      date: "June 15-16, 2024",
+      location: "Virtual Event",
+      description:
+        "Join us for two days of insights, networking, and blockchain innovation discussions.",
     },
     {
-      title: 'Developer Workshop',
-      date: 'July 1, 2024',
-      location: 'London, UK',
-      description: 'Hands-on workshop for developers building on our blockchain.'
-    }
+      title: "Developer Workshop",
+      date: "July 1, 2024",
+      location: "London, UK",
+      description:
+        "Hands-on workshop for developers building on our blockchain.",
+    },
   ];
 
   return (
@@ -68,7 +88,8 @@ const CommunitySection = () => {
             Join Our Community
           </h2>
           <p className="mt-4 text-xl text-gray-500">
-            Connect, collaborate, and grow with our global community of blockchain enthusiasts
+            Connect, collaborate, and grow with our global community of
+            blockchain enthusiasts
           </p>
         </div>
 
@@ -81,7 +102,9 @@ const CommunitySection = () => {
 
         {/* Blog and News */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Latest Updates</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            Latest Updates
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <span className="text-sm font-medium text-indigo-600">Blog</span>
@@ -89,9 +112,13 @@ const CommunitySection = () => {
                 The Future of Blockchain Technology
               </h4>
               <p className="mt-2 text-gray-600">
-                Explore our vision for the next generation of blockchain infrastructure and applications.
+                Explore our vision for the next generation of blockchain
+                infrastructure and applications.
               </p>
-              <a href="/dharitriChanges" className="mt-4 inline-block text-indigo-600 hover:text-indigo-500">
+              <a
+                href="/dharitriChanges"
+                className="mt-4 inline-block text-indigo-600 hover:text-indigo-500"
+              >
                 Read more →
               </a>
             </div>
@@ -101,9 +128,13 @@ const CommunitySection = () => {
                 Major Protocol Upgrade Announcement
               </h4>
               <p className="mt-2 text-gray-600">
-                Learn about the upcoming protocol upgrade and its benefits for the ecosystem.
+                Learn about the upcoming protocol upgrade and its benefits for
+                the ecosystem.
               </p>
-              <a href="/dharitriChanges" className="mt-4 inline-block text-indigo-600 hover:text-indigo-500">
+              <a
+                href="/dharitriChanges"
+                className="mt-4 inline-block text-indigo-600 hover:text-indigo-500"
+              >
                 Read more →
               </a>
             </div>
@@ -112,7 +143,9 @@ const CommunitySection = () => {
 
         {/* Events */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Upcoming Events</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            Upcoming Events
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {upcomingEvents.map((event, index) => (
               <EventCard key={index} {...event} />
@@ -127,8 +160,9 @@ const CommunitySection = () => {
             <div className="ml-6">
               <h3 className="text-2xl font-bold">Grants Program</h3>
               <p className="mt-2 text-indigo-100">
-                We support innovative projects building on our blockchain through our grants program.
-                Apply now to receive funding and technical support.
+                We support innovative projects building on our blockchain
+                through our grants program. Apply now to receive funding and
+                technical support.
               </p>
               <button className="mt-6 px-6 py-3 bg-white text-indigo-700 rounded-md font-medium hover:bg-indigo-50 transition-colors">
                 Apply for Grant
