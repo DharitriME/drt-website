@@ -204,14 +204,14 @@
 // export default Navbar;
 
 import React, { useState, useEffect } from "react";
-import { Menu, X, ChevronDown, Sun, Moon, ArrowRight } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import logo from "../../logo.svg";
 
 const Navbar = ({ isNavVisible, setIsNavVisible }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  // const [isDark, setIsDark] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
 
   useEffect(() => {
@@ -535,7 +535,7 @@ const Navbar = ({ isNavVisible, setIsNavVisible }) => {
                       isScrolled ? "h-11" : "h-12"
                     }`}
                   />
-                  <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" />
+                  {/* <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200" /> */}
                 </div>
                 {/* <div className="relative">
                   <span
@@ -624,7 +624,7 @@ const Navbar = ({ isNavVisible, setIsNavVisible }) => {
 
               {/* Right Section */}
               <div className="hidden lg:flex items-center space-x-4">
-                <button
+                {/* <button
                   onClick={() => setIsDark(!isDark)}
                   className="p-2 rounded-full hover:bg-gray-800 transition-colors text-gray-100"
                 >
@@ -633,7 +633,7 @@ const Navbar = ({ isNavVisible, setIsNavVisible }) => {
                   ) : (
                     <Moon className="w-4 h-4" />
                   )}
-                </button>
+                </button> */}
                 <button
                   onClick={() => setIsNavVisible(!isNavVisible)}
                   className={`p-3 rounded-full transition-colors ${
