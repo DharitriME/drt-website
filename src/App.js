@@ -1,166 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home/Home";
 import Navbar from "./components/layout/Navbar";
-import HeroSection from "./components/Home/Hero";
-import ProductsSection from "./components/sections/ProductsSection";
-import DevelopersSection from "./components/sections/DevelopersSection";
-import EcosystemSection from "./components/sections/EcosystemSection";
-import CommunitySection from "./components/sections/CommunitySection";
-import AboutSection from "./components/sections/AboutSection";
+import Footer from "./components/layout/Footer";
+import Started from "./components/pages/Individuals/Started";
+import Rewa from "./components/pages/Individuals/Rewa";
+import Chain from "./components/pages/Individuals/Chain";
+import Staking from "./components/pages/Individuals/Staking";
+import Sustainability from "./components/pages/Individuals/Sustainability";
+import BuildersHub from "./components/pages/Developers/Builders";
+import Dapp from "./components/pages/Developers/Dapp";
+import Tutorials from "./components/pages/Developers/Tutorials";
+import Tools from "./components/pages/Developers/Tools";
+import Releases from "./components/pages/Developers/Releases";
+import Roadmap from "./components/pages/Developers/Roadmap";
 
 const App = () => {
-  const [isNavVisible, setIsNavVisible] = useState(true);
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Pass isNavVisible state and setter to Navbar */}
-      <Navbar isNavVisible={isNavVisible} setIsNavVisible={setIsNavVisible} />
-
-      {/* Main Content with dynamic padding-top */}
-      <main
-        className={`transition-all duration-500 ${
-          isNavVisible ? "pt-24" : "pt-0"
-        }`}
-      >
-        <HeroSection />
-
-        {/* Main Content */}
-        <main>
-          {/* Products Section */}
-          <section id="products">
-            <ProductsSection />
-          </section>
-
-          {/* Developers Section */}
-          <section id="developers">
-            <DevelopersSection />
-          </section>
-
-          {/* Ecosystem Section */}
-          <section id="ecosystem">
-            <EcosystemSection />
-          </section>
-
-          {/* Community Section */}
-          <section id="community">
-            <CommunitySection />
-          </section>
-
-          {/* About Section */}
-          <section id="about">
-            <AboutSection />
-          </section>
-        </main>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Company Info */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Your Brand</h3>
-              <p className="text-gray-400">
-                Building the future of blockchain technology
-              </p>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="#products"
-                    className="text-gray-400 hover:text-white"
-                  >
-                    Products
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#developers"
-                    className="text-gray-400 hover:text-white"
-                  >
-                    Developers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#ecosystem"
-                    className="text-gray-400 hover:text-white"
-                  >
-                    Ecosystem
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#community"
-                    className="text-gray-400 hover:text-white"
-                  >
-                    Community
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Resources */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Resources</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="/dharitriChanges"
-                    className="text-gray-400 hover:text-white"
-                  >
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/dharitriChanges"
-                    className="text-gray-400 hover:text-white"
-                  >
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/dharitriChanges"
-                    className="text-gray-400 hover:text-white"
-                  >
-                    Whitepaper
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/dharitriChanges"
-                    className="text-gray-400 hover:text-white"
-                  >
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
-              <ul className="space-y-2">
-                <li className="text-gray-400">contact@yourbrand.com</li>
-                <li className="text-gray-400">Twitter: @YourBrand</li>
-                <li className="text-gray-400">Discord: YourBrand</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>
-              &copy; {new Date().getFullYear()} Your Brand. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/Individuals/Started" element={<Started />} />
+        <Route exact path="/Individuals/Rewa" element={<Rewa />} />
+        <Route exact path="/Individuals/Chain" element={<Chain />} />
+        <Route exact path="/Individuals/Staking" element={<Staking />} />
+        <Route
+          exact
+          path="/Individuals/Sustainability"
+          element={<Sustainability />}
+        />
+        <Route exact path="/Developers/BuildersHub" element={<BuildersHub />} />
+        <Route exact path="/Developers/Dapp" element={<Dapp />} />
+        <Route exact path="/Developers/Tools" element={<Tools />} />
+        <Route exact path="/Developers/Releases" element={<Releases />} />
+        <Route exact path="/Developers/Roadmap" element={<Roadmap />} />
+        <Route exact path="/Developers/Tutorials" element={<Tutorials />} />
+        <Route exact path="/Developers/Tutorials" element={<Tutorials />} />
+        <Route exact path="/Developers/Tutorials" element={<Tutorials />} />
+        <Route exact path="/Developers/Tutorials" element={<Tutorials />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 };
-
 export default App;
