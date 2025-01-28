@@ -13,7 +13,10 @@ const HeroSection = () => {
   const images = [image1, image2, image3, image4];
 
   return (
-    <div className="relative bg-gray-900 overflow-hidden">
+    <div
+      className="relative bg-gray-900 overflow-hidden"
+      style={{ top: "90px" }}
+    >
       {/* Left section */}
       <div className="max-w-7xl mx-auto">
         <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-1/2 lg:pb-28 xl:pb-32">
