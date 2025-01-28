@@ -110,7 +110,7 @@ const Tools = () => {
                 Connect with other developers and get support from our team
               </p>
               <a
-                href="#"
+                href="https://discord.com"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
                 Join Discord →
@@ -124,7 +124,7 @@ const Tools = () => {
                 Discuss technical topics and share your knowledge
               </p>
               <a
-                href="#"
+                href="www.forums.google.com"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
                 Visit Forum →
@@ -138,7 +138,7 @@ const Tools = () => {
                 Explore our open-source repositories and contribute
               </p>
               <a
-                href="#"
+                href="www.github.com"
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
                 View GitHub →
