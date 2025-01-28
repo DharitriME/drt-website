@@ -16,7 +16,7 @@ import Releases from "./components/pages/Developers/Releases";
 import Roadmap from "./components/pages/Developers/Roadmap";
 
 const App = () => {
-  return (
+return (
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -44,4 +44,5 @@ const App = () => {
     </BrowserRouter>
   );
 };
+
 export default App;

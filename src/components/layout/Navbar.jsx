@@ -482,6 +482,7 @@ const Navbar = () => {
                 </button>
               </div> */}
 
+
               {/* Mobile menu button */}
               <button
                 className="lg:hidden p-2 rounded-lg text-gray-100 hover:bg-gray-800"
